@@ -1,0 +1,2559 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điện Máy Hải Lan - Setup Full Combo Điện Máy</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts: Be Vietnam Pro -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary-bg: #01081a;
+        --secondary-bg: #030f2e;
+        --accent-yellow: #ffbe00;
+        --accent-blue: #00a2ff;
+        --text-white: #ffffff;
+        --text-gray: #b0c4de;
+        --text-dark: #333333;
+        --zalo-color: #0068ff;
+        --phone-color: #d12a2a;
+        --card-border: rgba(0, 162, 255, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+
+      body {
+        background-color: var(--primary-bg);
+        color: var(--text-white);
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      /* Tech Grid Background */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image:
+          linear-gradient(rgba(0, 162, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 162, 255, 0.02) 1px, transparent 1px);
+        background-size: 30px 30px;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 100%;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Section Global Titles */
+      .section-title {
+        text-align: center;
+        font-size: 26px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        color: #fff;
+        letter-spacing: 0.5px;
+      }
+
+      .section-title span {
+        color: #ec1c24; /* Red accent */
+      }
+
+      /* --- 1. HEADER --- */
+      header {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        /* background: rgba(1, 8, 26, 0.95); */
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo-area {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-circle {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #ff4e00, #ec1c24);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 20px;
+        color: #fff;
+        box-shadow: 0 0 15px rgba(236, 28, 36, 0.4);
+      }
+
+      .logo-text h1 {
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        line-height: 1.1;
+      }
+
+      .logo-text p {
+        font-size: 10px;
+        color: var(--accent-yellow);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+      }
+
+      nav ul li a {
+        color: var(--text-white);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: var(--accent-yellow);
+      }
+
+      .header-cta-btn {
+        background-color: var(--accent-yellow);
+        color: #000;
+        padding: 10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.2s;
+      }
+
+      .header-cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 190, 0, 0.4);
+      }
+
+      /* --- 2. HERO SECTION --- */
+      .hero {
+        padding: 50px 0;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .hero-left {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .badge-professional {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1.5px solid var(--accent-blue);
+        background: rgba(0, 162, 255, 0.1);
+        color: #fff;
+        padding: 6px 18px;
+        border-radius: 50px;
+        width: fit-content;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .badge-professional::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-color: #00e5ff;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #00e5ff;
+      }
+
+      .hero-titles {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .title-setup {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+
+      .title-main-gold {
+        font-size: 54px;
+        font-weight: 900;
+        color: var(--accent-yellow);
+        text-transform: uppercase;
+        line-height: 1.1;
+      }
+
+      .title-main-white {
+        font-size: 38px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 1.1;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .benefit-card {
+        background: rgba(13, 31, 74, 0.5);
+        border: 1px solid rgba(0, 162, 255, 0.15);
+        border-radius: 8px;
+        padding: 12px 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .benefit-icon {
+        color: var(--accent-blue);
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+
+      .benefit-text {
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .action-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 28px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        font-size: 15px;
+        transition: all 0.2s;
+      }
+
+      .btn-zalo {
+        background: linear-gradient(135deg, #0084ff, #0056b3);
+        box-shadow: 0 4px 15px rgba(0, 132, 255, 0.3);
+      }
+
+      /* Zalo - xanh lam đậm (brand color của Zalo) */
+      .btn-zalo {
+        background: linear-gradient(135deg, #0068ff, #0052cc);
+        box-shadow: 0 4px 15px rgba(0, 104, 255, 0.35);
+      }
+
+      .btn-zalo .zalo-icon {
+        background-color: transparent;
+        color: #fff;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        display: inline;
+        align-items: unset;
+        justify-content: unset;
+        font-size: 15px;
+        font-weight: 900;
+      }
+
+      /* Facebook - xanh navy/indigo (brand color của Facebook) */
+      .btn-facebook {
+        background: linear-gradient(135deg, #1877f2, #0a4fa8);
+        box-shadow: 0 4px 15px rgba(24, 119, 242, 0.35);
+      }
+
+      /* Phone giữ màu đỏ */
+      .btn-phone {
+        background: linear-gradient(135deg, #e31818, #9c0c0c);
+        box-shadow: 0 4px 15px rgba(227, 24, 24, 0.3);
+      }
+
+      .btn-action:hover {
+        transform: translateY(-2px);
+      }
+
+      .location-info {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--text-gray);
+        font-weight: 500;
+      }
+
+      .location-info i {
+        color: var(--accent-blue);
+      }
+
+      /* Hero Right (Brand Box) */
+      .brand-container {
+        background: rgba(5, 19, 54, 0.85);
+        border: 1.5px solid rgba(0, 162, 255, 0.3);
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: 0 0 25px rgba(0, 162, 255, 0.2);
+      }
+
+      .brand-title-divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        color: var(--accent-yellow);
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+      }
+
+      .brand-title-divider::before,
+      .brand-title-divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 190, 0, 0.5),
+          transparent
+        );
+      }
+
+      .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-bottom: 25px;
+      }
+
+      .logo-box {
+        background-color: #ffffff;
+        border-radius: 6px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Brand Logos Inline Styles */
+      .logo-sony {
+        font-family: "Arial Black", sans-serif;
+        font-weight: 900;
+        color: #000;
+        font-size: 13px;
+      }
+      .logo-samsung {
+        font-family: "Arial Black", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+        color: #074ca1;
+        font-size: 11px;
+      }
+      .logo-panasonic {
+        font-family: "Times New Roman", serif;
+        font-weight: bold;
+        color: #002252;
+        font-size: 12px;
+      }
+      .logo-aqua {
+        font-family: sans-serif;
+        font-weight: 300;
+        letter-spacing: 2px;
+        color: #0093d0;
+        font-size: 12px;
+      }
+      .logo-lg {
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #c6004e;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+      }
+      .logo-lg::before {
+        content: "L";
+        display: inline-block;
+        background-color: #c6004e;
+        color: white;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 12px;
+        font-size: 8px;
+      }
+      .logo-hitachi {
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #e60012;
+        font-size: 11px;
+      }
+      .logo-nakamix {
+        font-family: sans-serif;
+        font-weight: 900;
+        color: #ff5d00;
+        font-size: 10px;
+      }
+      .logo-sanyo {
+        font-family: "Arial Black", sans-serif;
+        font-weight: 900;
+        color: #004098;
+        font-size: 11px;
+      }
+
+      .features-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+      }
+
+      .feature-item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .feature-item:not(:last-child) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .feature-item-icon {
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .feature-item-text {
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      /* --- 3. PROBLEM SECTION --- */
+      .problems-section {
+        background-color: #ffffff;
+        color: var(--text-dark);
+        padding: 60px 0;
+      }
+
+      .problems-section .section-title {
+        color: var(--text-dark);
+      }
+
+      .problems-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+        margin-bottom: 35px;
+      }
+
+      .problem-card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: transform 0.2s;
+      }
+
+      .problem-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .problem-img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 130px;
+        overflow: hidden;
+      }
+
+      .problem-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .problem-badge-x {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 24px;
+        height: 24px;
+        background-color: #ec1c24;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .problem-text {
+        padding: 15px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #2d3748;
+        line-height: 1.5;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .solution-badge-bar {
+        background-color: #ebfaf0;
+        border: 1px dashed #2ecc71;
+        border-radius: 50px;
+        padding: 12px 25px;
+        text-align: center;
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #1b5e20;
+        max-width: 940px;
+        margin: 0 auto;
+      }
+
+      .solution-badge-bar span {
+        color: #ec1c24;
+      }
+
+      /* --- 4. EXPLANATION SECTION --- */
+      .explanation-section {
+        padding: 65px 0;
+        background-color: #f7fafc;
+        color: var(--text-dark);
+      }
+
+      .explanation-section .section-title {
+        color: var(--text-dark);
+      }
+
+      .explanation-layout {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .explanation-img-box {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        height: 380px;
+      }
+
+      .explanation-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Horizontal Timeline Chain style */
+      .timeline-chain {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .timeline-step {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: #fff;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+        border-left: 4px solid var(--accent-blue);
+      }
+
+      .step-num-icon {
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #00a2ff, #0056b3);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+
+      .step-desc h4 {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--primary-bg);
+        margin-bottom: 4px;
+      }
+
+      .step-desc p {
+        font-size: 12px;
+        color: #718096;
+        line-height: 1.4;
+      }
+
+      /* --- 5. POPULAR COMBOS SECTION --- */
+      .combos-section {
+        padding: 65px 0;
+        background-color: #020b22;
+      }
+
+      .combos-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .combo-card {
+        background: #ffffff;
+        color: var(--text-dark);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        border-top: 6px solid #ccc;
+        position: relative;
+      }
+
+      .combo-card.basic {
+        border-top-color: #2ecc71;
+      }
+      .combo-card.standard {
+        border-top-color: #00a2ff;
+      }
+      .combo-card.premium {
+        border-top-color: #ec1c24;
+      }
+
+      .combo-hot-badge {
+        position: absolute;
+        top: 15px;
+        right: -30px;
+        background-color: #ec1c24;
+        color: white;
+        font-weight: 800;
+        font-size: 10px;
+        padding: 4px 30px;
+        transform: rotate(45deg);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .combo-header {
+        padding: 25px 20px 15px 20px;
+        text-align: center;
+        border-bottom: 1px solid #edf2f7;
+      }
+
+      .combo-badge-title {
+        font-size: 15px;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+      }
+      .combo-card.basic .combo-badge-title {
+        color: #2ecc71;
+      }
+      .combo-card.standard .combo-badge-title {
+        color: #00a2ff;
+      }
+      .combo-card.premium .combo-badge-title {
+        color: #ec1c24;
+      }
+
+      .combo-subtitle {
+        font-size: 11px;
+        color: #718096;
+        font-weight: 600;
+      }
+
+      .combo-features {
+        padding: 20px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex-grow: 1;
+      }
+
+      .combo-features li {
+        font-size: 12.5px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #4a5568;
+      }
+
+      .combo-features li i {
+        color: #2ecc71;
+        font-size: 12px;
+      }
+
+      .combo-pricing-footer {
+        padding: 20px;
+        background-color: #f8fafc;
+        text-align: center;
+        border-top: 1px solid #edf2f7;
+      }
+
+      .price-label {
+        font-size: 11px;
+        color: #a0aec0;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .price-value {
+        font-size: 22px;
+        font-weight: 800;
+        color: #ec1c24;
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      .btn-combo-details {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 13px;
+        color: white;
+        transition: opacity 0.2s;
+      }
+
+      .combo-card.basic .btn-combo-details {
+        background-color: #2ecc71;
+      }
+      .combo-card.standard .btn-combo-details {
+        background-color: #00a2ff;
+      }
+      .combo-card.premium .btn-combo-details {
+        background-color: #ec1c24;
+      }
+      .btn-combo-details:hover {
+        opacity: 0.9;
+      }
+
+      /* Custom combo request card */
+      .combo-custom-card {
+        background: linear-gradient(135deg, #020c24 0%, #0d275e 100%);
+        border: 1.5px solid rgba(0, 162, 255, 0.3);
+        border-radius: 12px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .custom-card-body h4 {
+        font-size: 20px;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+
+      .custom-card-body p {
+        font-size: 13px;
+        color: var(--accent-yellow);
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .custom-card-img {
+        width: 140px;
+        position: absolute;
+        bottom: 60px;
+        right: 10px;
+        opacity: 0.8;
+        pointer-events: none;
+      }
+
+      .btn-custom-cta {
+        background-color: #e31818;
+        color: white;
+        padding: 12px;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 13.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        box-shadow: 0 4px 10px rgba(227, 24, 24, 0.4);
+        z-index: 1;
+      }
+
+      /* --- 6. REAL IMAGES SECTION --- */
+      .real-images-section {
+        padding: 65px 0;
+        background-color: #01081a;
+      }
+
+      .images-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin-bottom: 30px;
+      }
+
+      .image-item {
+        border-radius: 8px;
+        overflow: hidden;
+        height: 160px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.2s;
+      }
+
+      .image-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .image-item:hover {
+        transform: scale(1.03);
+        border-color: var(--accent-blue);
+      }
+
+      .btn-more-images-container {
+        text-align: center;
+      }
+
+      .btn-more-images {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #0b1a3e;
+        border: 1.5px solid var(--accent-blue);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+
+      .btn-more-images:hover {
+        background-color: var(--accent-blue);
+        box-shadow: 0 0 15px rgba(0, 162, 255, 0.4);
+      }
+
+      /* --- 7. AWARDS SECTION --- */
+      .awards-section {
+        padding: 65px 0;
+        background-color: #ffffff;
+        color: var(--text-dark);
+        text-align: center;
+      }
+
+      .awards-section .section-title {
+        color: var(--text-dark);
+      }
+
+      .awards-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .award-frame {
+        border: 8px solid #a3704c; /* Wooden Frame Color */
+        outline: 2px solid #5c3a21;
+        background: #fff;
+        padding: 12px 8px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 160px;
+        transition: transform 0.2s;
+      }
+
+      .award-frame:hover {
+        transform: translateY(-5px);
+      }
+
+      .award-inner {
+        border: 1px solid #d4af37; /* Golden border inner */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+      }
+
+      .award-logo {
+        font-weight: 800;
+        font-size: 11px;
+        margin-bottom: 5px;
+      }
+      .award-inner.samsung .award-logo {
+        color: #074ca1;
+      }
+      .award-inner.lg .award-logo {
+        color: #c6004e;
+      }
+      .award-inner.daikin .award-logo {
+        color: #0093d0;
+        font-family: sans-serif;
+      }
+      .award-inner.panasonic .award-logo {
+        color: #002252;
+      }
+
+      .award-title {
+        font-size: 9px;
+        font-weight: 700;
+        color: #2d3748;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        letter-spacing: 0.5px;
+      }
+
+      .award-year {
+        font-size: 11px;
+        font-weight: 800;
+        color: #d4af37; /* Gold color */
+      }
+
+      .trophy-inner i {
+        font-size: 32px;
+        color: #d4af37;
+        margin-bottom: 8px;
+      }
+
+      .trophy-inner span {
+        font-size: 10px;
+        font-weight: 700;
+        color: #4a5568;
+      }
+
+      .award-slogan {
+        font-size: 14px;
+        font-weight: 700;
+        color: #2f855a;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* --- 8. PRE-FOOTER CTA BAR --- */
+      .pre-footer-cta {
+        background-color: #051338;
+        border-top: 3px solid var(--accent-yellow);
+        border-bottom: 3px solid var(--accent-yellow);
+        padding: 30px 0;
+      }
+
+      .pre-footer-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .pre-footer-text h3 {
+        font-size: 20px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+
+      .pre-footer-text p {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--accent-yellow);
+      }
+
+      .pre-footer-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      /* --- 9. MAIN FOOTER --- */
+      footer {
+        background-color: #020716;
+        padding: 50px 0 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .footer-main-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.2fr;
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h4 {
+        font-size: 14px;
+        font-weight: 800;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        letter-spacing: 0.5px;
+      }
+
+      .footer-col-logo .logo-circle {
+        margin-bottom: 12px;
+      }
+
+      .footer-logo-slogan {
+        font-size: 12px;
+        color: var(--text-gray);
+        margin-top: 10px;
+      }
+
+      .footer-info-item {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 15px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--text-gray);
+      }
+
+      .footer-info-item i {
+        color: var(--accent-blue);
+        font-size: 16px;
+        margin-top: 3px;
+      }
+
+      /* Bottom trust guarantees strip */
+      .footer-trust-strip {
+        background-color: #0a1126;
+        padding: 20px;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .trust-icon {
+        color: var(--accent-blue);
+        font-size: 18px;
+      }
+
+      .trust-desc h5 {
+        font-size: 11px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+      }
+
+      .trust-desc p {
+        font-size: 10px;
+        color: var(--text-gray);
+      }
+
+      .copyright-text {
+        text-align: center;
+        font-size: 11px;
+        color: #4a5568;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 20px;
+      }
+
+      /* --- STATS BAR OVERLAY --- */
+      .stats-bar-container {
+        margin-top: -30px;
+        position: relative;
+        z-index: 10;
+      }
+
+      .stats-bar {
+        border: 2px solid var(--accent-yellow);
+        border-radius: 16px;
+        background: linear-gradient(
+          135deg,
+          rgba(5, 20, 55, 0.98),
+          rgba(1, 10, 30, 0.98)
+        );
+        box-shadow: 0 0 25px rgba(255, 190, 0, 0.15);
+        padding: 25px 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .stat-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+      }
+
+      .stat-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -10px;
+        top: 10%;
+        height: 80%;
+        width: 1px;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(255, 255, 255, 0.15),
+          transparent
+        );
+      }
+
+      .stat-icon-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(0, 162, 255, 0.15) 0%,
+          rgba(5, 19, 54, 0.6) 100%
+        );
+        border: 1px solid rgba(0, 162, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: #fff;
+        flex-shrink: 0;
+      }
+
+      .stat-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .stat-number {
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--accent-yellow);
+        line-height: 1.1;
+      }
+
+      .stat-label {
+        font-size: 11.5px;
+        font-weight: 600;
+        color: var(--text-white);
+        line-height: 1.3;
+      }
+
+      .stat-underline {
+        width: 30px;
+        height: 2px;
+        background-color: var(--accent-yellow);
+        margin-top: 5px;
+        border-radius: 2px;
+      }
+
+      /* --- RESPONSIVE MEDIA QUERIES --- */
+      @media (max-width: 1024px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .problems-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .explanation-layout {
+          grid-template-columns: 1fr;
+        }
+        .explanation-img-box {
+          height: 280px;
+        }
+        .combos-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .images-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .awards-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .stats-bar {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+        }
+        .stat-item:not(:last-child)::after {
+          display: none;
+        }
+        .footer-main-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .footer-trust-strip {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          gap: 15px;
+        }
+        nav ul {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+        }
+        .title-main-gold {
+          font-size: 38px;
+        }
+        .title-main-white {
+          font-size: 28px;
+        }
+        .benefits-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .action-buttons {
+          flex-direction: column;
+        }
+        .problems-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .logo-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .pre-footer-grid {
+          flex-direction: column;
+          text-align: center;
+        }
+        .pre-footer-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .problems-grid {
+          grid-template-columns: 1fr;
+        }
+        .combos-grid {
+          grid-template-columns: 1fr;
+        }
+        .images-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .awards-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .stats-bar {
+          grid-template-columns: 1fr;
+        }
+        .footer-trust-strip {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* --- PRODUCTS CATEGORY SECTION --- */
+      .products-section {
+        padding: 50px 0;
+        background: #ffffff;
+        color: var(--text-dark);
+      }
+
+      .products-section .section-title {
+        color: var(--text-dark);
+      }
+
+      .products-grid {
+        background: #fff;
+        border: 2px solid #f0c040;
+        border-radius: 16px;
+        padding: 20px 15px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      }
+
+      .product-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: var(--text-dark);
+        padding: 8px 4px;
+        border-radius: 10px;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+        cursor: pointer;
+      }
+
+      .product-item:hover {
+        background: #f0f7ff;
+        transform: translateY(-3px);
+      }
+
+      .product-img-wrapper {
+        position: relative;
+        width: 72px;
+        height: 72px;
+        background: #f5f8ff;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #e8edf5;
+      }
+
+      .product-icon {
+        font-size: 28px;
+        color: #2563eb;
+      }
+
+      .product-badge {
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        background: #ec1c24;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 800;
+        padding: 2px 6px;
+        border-radius: 20px;
+        white-space: nowrap;
+        box-shadow: 0 2px 6px rgba(236, 28, 36, 0.3);
+      }
+
+      .product-badge.sale {
+        background: #ff6b00;
+        box-shadow: 0 2px 6px rgba(255, 107, 0, 0.3);
+      }
+
+      .product-name {
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1.3;
+        color: #333;
+      }
+
+      .product-all .product-img-wrapper {
+        background: #eff6ff;
+        border: 1.5px solid #bfdbfe;
+      }
+
+      .product-all .product-name {
+        color: #2563eb;
+        font-weight: 700;
+      }
+
+      .product-img-wrapper {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .product-img-icon {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        display: block;
+      }
+
+      .rotate-90 {
+        transform: rotate(90deg);
+      }
+
+      @media (max-width: 1024px) {
+        .products-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .product-img-wrapper {
+          width: 58px;
+          height: 58px;
+        }
+        .product-icon {
+          font-size: 22px;
+        }
+      }
+
+      /* --- THANK YOU SECTION --- */
+      .thankyou-section {
+        padding: 70px 0;
+        background: linear-gradient(
+          135deg,
+          #020b22 0%,
+          #051338 50%,
+          #020b22 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .thankyou-section::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 190, 0, 0.06) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      .thankyou-inner {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .thankyou-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #e31818, #ff6b6b);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: #fff;
+        margin: 0 auto 25px auto;
+        box-shadow: 0 0 30px rgba(227, 24, 24, 0.3);
+        animation: heartbeat 2s ease-in-out infinite;
+      }
+
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.07);
+        }
+      }
+
+      .thankyou-title {
+        font-size: 28px;
+        font-weight: 900;
+        color: var(--accent-yellow);
+        margin-bottom: 18px;
+        line-height: 1.3;
+      }
+
+      .thankyou-subtitle {
+        font-size: 14px;
+        color: var(--text-gray);
+        line-height: 1.8;
+        margin-bottom: 35px;
+      }
+
+      .thankyou-subtitle strong {
+        color: var(--accent-yellow);
+      }
+
+      .thankyou-values {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      .tvalue-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 10px 18px;
+        border-radius: 50px;
+      }
+
+      .tvalue-item i {
+        color: var(--accent-yellow);
+        font-size: 14px;
+      }
+
+      .feedback-box {
+        background: rgba(0, 162, 255, 0.07);
+        border: 1.5px solid rgba(0, 162, 255, 0.2);
+        border-radius: 14px;
+        padding: 30px;
+        margin-bottom: 40px;
+        text-align: left;
+      }
+
+      .feedback-box h3 {
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--accent-blue);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .feedback-box p {
+        font-size: 13px;
+        color: var(--text-gray);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .feedback-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .feedback-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .feedback-link i {
+        color: var(--accent-blue);
+        width: 18px;
+        font-size: 15px;
+      }
+
+      .feedback-link:hover {
+        color: var(--accent-yellow);
+      }
+
+      .thankyou-signature {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .signature-logo {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #ff4e00, #ec1c24);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 900;
+        font-size: 18px;
+        color: #fff;
+        box-shadow: 0 0 15px rgba(236, 28, 36, 0.3);
+        flex-shrink: 0;
+      }
+
+      .thankyou-signature strong {
+        display: block;
+        font-size: 14px;
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 3px;
+      }
+
+      .thankyou-signature p {
+        font-size: 11px;
+        color: var(--text-gray);
+      }
+
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Nav active highlighting */
+      nav ul li a.active {
+        color: var(--accent-yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. HEADER -->
+    <header>
+      <div class="container header-container">
+        <div class="logo-area">
+          <div class="logo-text">
+            <h1>ĐIỆN MÁY HẢI LAN</h1>
+            <p>Tổng kho phân phối điện máy</p>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#hero-section">Trang Chủ</a></li>
+            <li><a href="#products-section">Sản Phẩm</a></li>
+            <li><a href="#combos-section">Combo Điện Máy</a></li>
+            <li><a href="#real-images-section">Hình Ảnh Thực Tế</a></li>
+            <li><a href="#awards-section">Giải Thưởng</a></li>
+            <li><a href="#thankyou-section">Liên Hệ</a></li>
+          </ul>
+        </nav>
+        <a href="tel:0945606998" class="header-cta-btn">
+          <i class="fa-solid fa-phone"></i> 0945 606 998
+        </a>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <main class="container" id="hero-section" style="padding-bottom: 10px">
+      <section class="hero">
+        <div class="hero-left">
+          <div class="badge-professional">Chuyên nghiệp – Uy tín – Tận tâm</div>
+          <div class="hero-titles">
+            <span class="title-setup">SETUP</span>
+            <h2 class="title-main-gold">FULL COMBO</h2>
+            <h3 class="title-main-white">ĐIỆN MÁY TRỌN GÓI</h3>
+          </div>
+
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <i class="fa-solid fa-headset benefit-icon"></i>
+              <span class="benefit-text">Tư vấn đúng nhu cầu</span>
+            </div>
+            <div class="benefit-card">
+              <i class="fa-solid fa-tags benefit-icon"></i>
+              <span class="benefit-text">Giá tốt tận kho</span>
+            </div>
+            <div class="benefit-card">
+              <i class="fa-solid fa-bolt benefit-icon"></i>
+              <span class="benefit-text">Giao nhanh</span>
+            </div>
+            <div class="benefit-card">
+              <i class="fa-solid fa-circle-check benefit-icon"></i>
+              <span class="benefit-text">Lắp đặt tận nơi</span>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <a href="#" class="btn-action btn-zalo">
+              <span class="zalo-icon">Z</span> Nhắn Zalo Ngay
+            </a>
+            <a href="tel:0945606998" class="btn-action btn-phone">
+              <i class="fa-solid fa-phone"></i> 0945606998
+            </a>
+            <a href="https://facebook.com" class="btn-action btn-facebook">
+              <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+          </div>
+
+          <div class="location-info">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Phục vụ tại: TP. Vinh, Nghệ An và khu vực lân cận</span>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- <div class="brand-container"> -->
+          <img
+            src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/706504687_122133924525054158_3377054691052282151_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGI7Wn9RALAo7LrhA4hdf4toEOQW8OUYdGgQ5Bbw5Rh0RrBgJTc71SwxBzYM9OUUOeHbf7-JZ8k7CaR-pSMrhic&_nc_ohc=z9rrHtW8hfUQ7kNvwGuBo0G&_nc_oc=AdoyCZ0_30G-UeU8RurFZHEZFjPVLN5P27YdKQYRmg3UlLvHLxi5qMrbd5iysydriv8&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=7f0gaWia3orMdHC141rSDw&_nc_ss=7b2a8&oh=00_Af48LthK5pRFC2nwVsOSTnTCczs3-n5RVGS0fpf97Z2KdQ&oe=6A1A70B6"
+            style="
+              max-height: 500px;
+              max-width: 100%;
+              width: 100%;
+              object-fit: contain;
+              border-radius: 24px;
+            "
+          />
+          <!-- </div> -->
+        </div>
+      </section>
+
+      <!-- STATS BAR OVERLAY -->
+      <div class="stats-bar-container">
+        <div class="stats-bar">
+          <div class="stat-item">
+            <div class="stat-icon-circle">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">Khách hàng tin tưởng</span>
+              <div class="stat-underline"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon-circle">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Công trình đã setup</span>
+              <div class="stat-underline"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon-circle">
+              <i class="fa-solid fa-shield"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Hàng chính hãng bảo hành đầy đủ</span>
+              <div class="stat-underline"></div>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon-circle">
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <div class="stat-content">
+              <span class="stat-number">1 đổi 1</span>
+              <span class="stat-label">Lỗi ở đổi mới trong 7 ngày</span>
+              <div class="stat-underline"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- NEW: PRODUCTS CATEGORY SECTION -->
+    <section class="products-section" id="products-section">
+      <div class="container">
+        <h2 class="section-title">Danh mục <span>sản phẩm</span></h2>
+        <div class="products-grid">
+          <!-- Row 1 -->
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://dienmaythanhan.vn/wp-content/uploads/2020/02/may-lanh-daikin-ftkc35uavmv-rkc35uavmv-1-5hp-inverter-gas-r32-1.png" alt="Máy lạnh" class="product-img-icon" />
+            </div>
+            <span class="product-name">Máy lạnh</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://ferolivietnam.vn/media/product/380_bb6600.png" alt="Quạt điều hòa" class="product-img-icon" />
+            </div>
+            <span class="product-name">Quạt điều hòa</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOPgCciCZnKaKPC2vc-kEIhrBctUJJ-8kuhw&s" alt="Tivi" class="product-img-icon" />
+            </div>
+            <span class="product-name">Tivi</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://kangarooshopping.vn/media/catalog/product/cache/33abed36a9845e3b99d91e5ec33a0568/k/g/kg3500avtu.png" alt="Máy lọc nước" class="product-img-icon" />
+            </div>
+            <span class="product-name">Máy lọc nước</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwEpy6mhInRS9A_mXJxKVVV_9sKj1FSVeRyg&s" alt="Tủ đông mát" class="product-img-icon" />
+            </div>
+            <span class="product-name">Tủ đông mát</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/q/u/quat-dung-livotec-s-200-1.jpg" alt="Quạt" class="product-img-icon" />
+            </div>
+            <span class="product-name">Quạt</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://bizweb.dktcdn.net/thumb/large/100/425/687/products/a110-ee0bf947-4920-42f2-9e11-810e8671edea.png?v=1621330906107" alt="Loa" class="product-img-icon" />
+            </div>
+            <span class="product-name">Loa</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://lh6.googleusercontent.com/proxy/KEZfqM_l7eaXJipnaRKhThAjY_VVKpHjWjBcBpcbW3s-xiRoKbbCxYbkIIhEE5lbgEfnKytjXb1eahnLa4s0J-tghRKTTR_2CR_OY_xceEdBfcJSBwmq1FKSPc3dN-2GNuo-bccwell_xGi2yy_3YhX7Pak9Tn32TNlJe_ixwn8OZVYBWugHuvIApiL1ruSq" alt="Máy lọc không khí" class="product-img-icon" />
+            </div>
+            <span class="product-name">Máy lọc không khí</span>
+          </div>
+
+          <!-- Row 2 -->
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT14-NFIxgtvk2tWDdrT4J4uSrzJ6dfDvQ1cA&s" alt="Tủ lạnh" class="product-img-icon" />
+            </div>
+            <span class="product-name">Tủ lạnh</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://cdn.mediamart.vn/images/product/may-giat-thong-minh-lg-ai-dd-15kg-say-10kg-f2515rntg_24235bbb.webp" alt="Máy giặt" class="product-img-icon" />
+            </div>
+            <span class="product-name">Máy giặt</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9PfEHeBC57xDX_JflQHvRSinJuQ1E6Rxckw&s" alt="Gia dụng" class="product-img-icon" />
+            </div>
+            <span class="product-name">Gia dụng</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img
+                src="https://dienmayrenhat.com.vn/wp-content/uploads/2019/06/s3rf.png"
+                alt="Máy sấy quần áo"
+                class="product-img-icon"
+              />
+            </div>
+            <span class="product-name">Máy sấy quần áo</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkxAiRmkh1fuHIqRuLdXHcEWbz6gYpWWMUeg&s" alt="Robot hút bụi" class="product-img-icon" />
+            </div>
+            <span class="product-name">Robot hút bụi</span>
+          </div>
+
+          <div class="product-item">
+            <div class="product-img-wrapper">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLtW9qL4C1XRzznQYdjci2nrkLY2_XfnIX5g&s" alt="Nồi cơm điện" class="product-img-icon" />
+            </div>
+            <span class="product-name">Nồi cơm điện</span>
+          </div>
+
+          <div class="product-item product-all">
+            <div class="product-img-wrapper">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIyd2B_yTilv2-EUEPEX-mdBvv0Wmw4SYRZg&s" alt="COMBO CÁ NHÂN" class="product-img-icon" />
+            </div>
+            <span class="product-name">GÓI COMBO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROBLEMS SECTION -->
+    <section class="problems-section" id="problems-section">
+      <div class="container">
+        <!-- <div class="hero-right">
+                <div class="brand-container">
+                    <div class="brand-title-divider">Tủ đông hòa phát</div>
+                    
+                    <div class="logo-grid">
+                        <div class="logo-box"><span class="logo-sony">SONY</span></div>
+                        <div class="logo-box"><span class="logo-samsung">SAMSUNG</span></div>
+                        <div class="logo-box"><span class="logo-panasonic">Panasonic</span></div>
+                        <div class="logo-box"><span class="logo-aqua">AQUA</span></div>
+                        <div class="logo-box"><span class="logo-lg">LG</span></div>
+                        <div class="logo-box"><span class="logo-hitachi">HITACHI</span></div>
+                        <div class="logo-box"><span class="logo-nakamix">NAKAMIX</span></div>
+                        <div class="logo-box"><span class="logo-sanyo">SANYO</span></div>
+                    </div>
+
+                    <div class="features-row">
+                        <div class="feature-item">
+                            <i class="fa-solid fa-truck-fast feature-item-icon"></i>
+                            <span class="feature-item-text">Giao hàng nhanh chóng</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-screwdriver-wrench feature-item-icon"></i>
+                            <span class="feature-item-text">Lắp đặt chuyên nghiệp</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-shield-halved feature-item-icon"></i>
+                            <span class="feature-item-text">Bảo hành chính hãng</span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+        <h2 class="section-title">
+          Bạn đang gặp phải những <span>vấn đề này?</span>
+        </h2>
+
+        <div class="problems-grid">
+          <!-- Card 1 -->
+          <div class="problem-card">
+            <div class="problem-img-wrapper">
+              <div class="problem-badge-x">✕</div>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGaWC9U_FzBDdgjALQWAMne76sjeE93NQj1g&s"
+                alt="Không biết chọn thiết bị"
+              />
+            </div>
+            <div class="problem-text">Không biết chọn thiết bị nào phù hợp</div>
+          </div>
+          <!-- Card 2 -->
+          <div class="problem-card">
+            <div class="problem-img-wrapper">
+              <div class="problem-badge-x">✕</div>
+              <img
+                src="https://vcdn1-suckhoe.vnecdn.net/2024/06/23/stress-jpeg-1719140653-9705-1719141313.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=velswJpfGWeBAfvvUD_E2A"
+                alt="Mất thời gian tìm kiếm"
+              />
+            </div>
+            <div class="problem-text">
+              Mất thời gian tìm kiếm, so sánh hãng sản phẩm
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="problem-card">
+            <div class="problem-img-wrapper">
+              <div class="problem-badge-x">✕</div>
+              <img
+                src="https://noithattubepquangngai.com/wp-content/uploads/tu-bep-laminate-noi-that-bep-quang-ngai-milidecor-300x225.jpg"
+                alt="Mua lẻ từng món"
+              />
+            </div>
+            <div class="problem-text">Mua lẻ từng món, rất bất tiện</div>
+          </div>
+          <!-- Card 4 -->
+          <div class="problem-card">
+            <div class="problem-img-wrapper">
+              <div class="problem-badge-x">✕</div>
+              <img
+                src="https://khauvaileng.vn/wp-content/uploads/2026/04/dan-ong-it-ham-muon-phai-lam-sao.jpg.webp"
+                alt="Sợ sai công suất"
+              />
+            </div>
+            <div class="problem-text">
+              Sợ mua sai công suất, không đúng nhu cầu
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="problem-card">
+            <div class="problem-img-wrapper">
+              <div class="problem-badge-x">✕</div>
+              <img
+                src="https://vcdn1-sohoa.vnecdn.net/2022/04/26/a1-3966-1650975038.jpg?w=680&h=0&q=100&dpr=2&fit=crop&s=als52_oLZExH__6OU67-xw"
+                alt="Không người lắp đặt"
+              />
+            </div>
+            <div class="problem-text">
+              Không có người tư vấn và lắp đặt trọn gói
+            </div>
+          </div>
+        </div>
+
+        <div class="solution-badge-bar">
+          ✔️ Đừng lo! Chúng tôi có giải pháp
+          <span>SETUP FULL COMBO TRỌN GÓI</span> – chỉ cần bạn đưa ra nhu cầu &
+          ngân sách, chúng tôi lo tất cả!
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. EXPLANATION SECTION -->
+    <section class="explanation-section">
+      <div class="container">
+        <h2 class="section-title">Full combo điện máy trọn gói là gì?</h2>
+
+        <div class="explanation-layout">
+          <div class="explanation-img-box">
+            <img
+              src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/480177917_122179403300253946_6813514872636290405_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF-BhNr51WC537W-YPKrHiko1oeu10c-AOjWh67XRz4Ayxw1gMB0Nu0LZ1788RA4uSNJuawd4lMEgQAKJ1VSeRp&_nc_ohc=PfD3xgy0Ju4Q7kNvwHyX5xI&_nc_oc=Adq5z0G3aSgvDhp3dHY8G92dfmVfLnM3kHrIskK58DPpmBNe6b-FsPFKd7TUdv-OcDc&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=0AecHdiQtBb2rItAFm3S1g&_nc_ss=7b2a8&oh=00_Af7ZZNvqYk07_oyHVKYj7amq16Ul4Kn9bRMcIBOBpvTQjg&oe=6A1A5E91"
+              alt="Vận chuyển và lắp đặt"
+            />
+          </div>
+
+          <div class="timeline-chain">
+            <!-- Step 1 -->
+            <div class="timeline-step">
+              <div class="step-num-icon">
+                <i class="fa-solid fa-file-invoice"></i>
+              </div>
+              <div class="step-desc">
+                <h4>Tư vấn theo nhu cầu & ngân sách</h4>
+                <p>
+                  Đội ngũ nhân viên tư vấn tận tình sẽ giúp bạn lên bảng dự toán
+                  thiết bị tối ưu nhất.
+                </p>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="timeline-step">
+              <div class="step-num-icon">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+              <div class="step-desc">
+                <h4>Chọn sản phẩm chính hãng, giá tốt</h4>
+                <p>
+                  Cam kết hàng mới 100%, nguyên đai nguyên kiện với mức giá xuất
+                  kho tốt nhất thị trường.
+                </p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="timeline-step">
+              <div class="step-num-icon">
+                <i class="fa-solid fa-truck-ramp-box"></i>
+              </div>
+              <div class="step-desc">
+                <h4>Giao hàng nhanh chóng</h4>
+                <p>
+                  Đội xe tải chuyên dụng hỗ trợ vận chuyển tận nhà nhanh chóng,
+                  đúng hẹn bàn giao.
+                </p>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="timeline-step">
+              <div class="step-num-icon">
+                <i class="fa-solid fa-toolbox"></i>
+              </div>
+              <div class="step-desc">
+                <h4>Lắp đặt trọn gói - Hướng dẫn sử dụng</h4>
+                <p>
+                  Đội ngũ kỹ thuật lành nghề lắp đặt chuyên nghiệp, thẩm mỹ và
+                  hướng dẫn sử dụng kỹ lưỡng.
+                </p>
+              </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="timeline-step">
+              <div class="step-num-icon">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+              <div class="step-desc">
+                <h4>Bảo hành - Hậu mãi uy tín</h4>
+                <p>
+                  Hỗ trợ tiếp nhận thông tin bảo hành chính hãng siêu tốc, bảo
+                  vệ quyền lợi trọn đời của bạn.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. POPULAR COMBOS SECTION -->
+    <section class="combos-section" id="combos-section">
+      <div class="container">
+        <h2 class="section-title">Combo điện máy phổ biến</h2>
+
+        <div class="combos-grid">
+          <!-- Combo 1 -->
+          <div class="combo-card basic">
+            <div class="combo-header">
+              <h4 class="combo-badge-title">Combo Cơ Bản</h4>
+              <span class="combo-subtitle">Nhà trọ - Sinh viên</span>
+            </div>
+            <ul class="combo-features">
+              <li><i class="fa-solid fa-check"></i> Tủ lạnh 2 cánh</li>
+              <li><i class="fa-solid fa-check"></i> Máy giặt cửa trên</li>
+              <li><i class="fa-solid fa-check"></i> Điều hòa 1 chiều</li>
+              <li><i class="fa-solid fa-check"></i> Bếp từ đơn</li>
+              <li><i class="fa-solid fa-check"></i> Ấm siêu tốc</li>
+            </ul>
+            <div class="combo-pricing-footer">
+              <span class="price-label">Giá chỉ từ</span>
+              <span class="price-value">9.900.000đ</span>
+              <a href="#" class="btn-combo-details">XEM CHI TIẾT</a>
+            </div>
+          </div>
+
+          <!-- Combo 2 -->
+          <div class="combo-card standard">
+            <div class="combo-hot-badge">HOT</div>
+            <div class="combo-header">
+              <h4 class="combo-badge-title">Combo Tiêu Chuẩn</h4>
+              <span class="combo-subtitle">Căn hộ chung cư 1-2 phòng ngủ</span>
+            </div>
+            <ul class="combo-features">
+              <li><i class="fa-solid fa-check"></i> Tủ lạnh Inverter</li>
+              <li><i class="fa-solid fa-check"></i> Máy giặt cửa ngang</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Điều hòa Inverter (2 bộ)
+              </li>
+              <li><i class="fa-solid fa-check"></i> TV 43 inch</li>
+              <li><i class="fa-solid fa-check"></i> Bếp từ đôi + Hút mùi</li>
+              <li><i class="fa-solid fa-check"></i> Lò vi sóng</li>
+            </ul>
+            <div class="combo-pricing-footer">
+              <span class="price-label">Giá chỉ từ</span>
+              <span class="price-value">24.900.000đ</span>
+              <a href="#" class="btn-combo-details">XEM CHI TIẾT</a>
+            </div>
+          </div>
+
+          <!-- Combo 3 -->
+          <div class="combo-card premium">
+            <div class="combo-header">
+              <h4 class="combo-badge-title">Combo Cao Cấp</h4>
+              <span class="combo-subtitle">Nhà mới - Biệt thự - Homestay</span>
+            </div>
+            <ul class="combo-features">
+              <li><i class="fa-solid fa-check"></i> Tủ lạnh Side by side</li>
+              <li><i class="fa-solid fa-check"></i> Máy giặt sấy</li>
+              <li><i class="fa-solid fa-check"></i> Điều hòa Inverter multi</li>
+              <li><i class="fa-solid fa-check"></i> TV 55 inch</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Bếp từ + Hút mùi cao cấp
+              </li>
+              <li><i class="fa-solid fa-check"></i> Máy lọc nước</li>
+              <li><i class="fa-solid fa-check"></i> Lò nướng / Lò vi sóng</li>
+            </ul>
+            <div class="combo-pricing-footer">
+              <span class="price-label">Giá chỉ từ</span>
+              <span class="price-value">Liên hệ</span>
+              <a href="#" class="btn-combo-details">XEM CHI TIẾT</a>
+            </div>
+          </div>
+
+          <!-- Custom Card -->
+          <div class="combo-custom-card">
+            <div class="custom-card-body">
+              <h4>Không tìm thấy combo phù hợp?</h4>
+              <p>
+                Gọi ngay để được thiết kế combo riêng biệt theo yêu cầu của bạn!
+              </p>
+              <!-- Stylized customer support icon in place of custom cutout image -->
+              <div
+                style="
+                  font-size: 70px;
+                  color: rgba(255, 255, 255, 0.15);
+                  margin-top: 20px;
+                  text-align: right;
+                "
+              >
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+            </div>
+            <a href="tel:0945606998" class="btn-custom-cta">
+              <i class="fa-solid fa-phone-volume"></i> GỌI TƯ VẤN NGAY
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. REAL IMAGES SECTION -->
+    <section class="real-images-section" id="real-images-section">
+      <div class="container">
+        <h2 class="section-title">Hình ảnh thực tế tại kho & công trình</h2>
+
+        <div class="images-grid">
+          <div class="image-item">
+            <img
+              src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/492797146_122191805750253946_2483356001630973855_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEzUTzm0939wd0UfpmwJ8fA8b0HHvxKVP7xvQce_EpU_qWLgwgucl7dIqaxkHTlKrAl-R42vT4Q_osf12qE6tt6&_nc_ohc=8ELJdJMXxgoQ7kNvwESHTXu&_nc_oc=AdrcB0p87FrcnroBUu-Q5Z5JJfoJM-AZHsX2mXoItCWM6TQTlkq_LXs4377Kw2mKOUM&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=D-bzaz1G5T5Kf7tiIB1k_Q&_nc_ss=7b2a8&oh=00_Af7glXYmJ1E3oS-CJopVeuO03EKIIGPxtC2jLRlVzZRpVA&oe=6A1A5497"
+              alt="Thực tế 1"
+            />
+          </div>
+          <div class="image-item">
+            <img
+              src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/491925971_122191448444253946_2487663362904508088_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGGx6s73X7wGgB__4KEQ4gatx-2EudR_Ji3H7YS51H8mBPSik0ddac03HgLrGEP6U8i-oF5YXZCP60IN51_vRg0&_nc_ohc=76sR-62vrFYQ7kNvwE1Ivry&_nc_oc=Adq5xnTTnLZZNqS5DGjDV3q0hJfsKkve3jmcrta6iZt-9wxUmr30mJ_YcN59nfn4AVY&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=fO-T3Q1g248Pd1h7OaSV4A&_nc_ss=7b2a8&oh=00_Af6EjGNKof-2mqh9P_9WSokvUWUDH_CNjiz0irPU-7zXSQ&oe=6A1A4B75"
+              alt="Thực tế 2"
+            />
+          </div>
+          <div class="image-item">
+            <img
+              src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/500075737_122196409340253946_8392383642457924752_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFTv90LiGXu92bPxcQwNbpaqlSn-pK1QT6qVKf6krVBPuCHKQFsyWL7RONaQhMsMIcrhNcGk15MW5_NFLt_Czn4&_nc_ohc=w2aTcJvMoy4Q7kNvwHLh3Ez&_nc_oc=AdoQQDlr6TdN_Tpz3dXWObIhcSuZV9-p39ZA7DQKLUnNGCFRcCfM6ydZeVxnMBwYjh8&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=Q7EbsZDhadBKHjBqHyR3ow&_nc_ss=7b2a8&oh=00_Af5_BNjtIU0z5if8y3yfoA6vFTkR9_bzC6CMK4lsZV_7RA&oe=6A1A68B5"
+              alt="Thực tế 3"
+            />
+          </div>
+          <div class="image-item">
+            <img
+              src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/475745232_122176540556253946_5049576780547014736_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHhtUqj9gTy_B9P5HDFf_0qv1yZZjq037C_XJlmOrTfsPHLAHg_jUgl7eUJx5pRpsb0KUn4CUJr3B9t2I8Q9NBW&_nc_ohc=WbnPy1_pnnwQ7kNvwGRRD1n&_nc_oc=Adoz7PKd24SaMFNpm0I_TIPEATGP5Z0npPabFIPo5a66UpXOygjqoRo_fCrvGZUSy4s&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=JyDwJuzsLF-cgBZfb3mdwQ&_nc_ss=7b2a8&oh=00_Af5rvJvvHUXhoz8fJYeLP1GXInAfWr5hKsSY-IWdt9OoxQ&oe=6A1A7CE0"
+              alt="Thực tế 4"
+            />
+          </div>
+          <div class="image-item">
+            <img
+              src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/471142415_122169199364253946_7818471601074428761_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGTfKAdVvrV_2ACTBHvon2tS6PP7wpCCt1Lo8_vCkIK3Rwx8QDn6xAj65q3AF38v84SV_JYYSpIAvmqNGuevObH&_nc_ohc=y-C0P-Xw6GgQ7kNvwHL0jyp&_nc_oc=AdqNQQO8Sj0OI-RFD5VBv5wVEl4LDdEqPJRBgHWy4AudQgeSswRjD_9jJP623FT2YSI&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=pp_lu-UjjKdVwRPMnmwBBA&_nc_ss=7b2a8&oh=00_Af5LWppr2U5mQJe202cThYF2eb8-K6Uz4SHI_gNF50nw-w&oe=6A1A73AB"
+              alt="Thực tế 5"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. AWARDS SECTION -->
+    <section class="awards-section" id="awards-section">
+      <div class="container">
+        <h2 class="section-title">Giải thưởng & chứng nhận đại lý xuất sắc</h2>
+
+        <div class="awards-grid">
+         <!-- Frame 1 -->
+<div class="award-frame">
+
+  <div 
+    class="award-inner real-award"
+    style="
+      background-image:url('https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/708376614_122133928035054158_3356385934330371764_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGZnqEyxv7BMgqMuz-EvlOInUcT-uxgefqdRxP67GB5-jXVxUmPhCncGORkSLuXimIWz2gftgIfjY28YV27s4wx&_nc_ohc=Kt7zHu6CDm8Q7kNvwE0fUBr&_nc_oc=AdpjLUcD7-AllZ79tqFv58S5pfqJEoNVBkj38KKmigCsOSRZq9WaQHTFudz2o9dffjg&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=fD8lHz9_gWP-Pkh67Lb5zQ&_nc_ss=7b2a8&oh=00_Af4wCCn3BrjUbEGFVAxa9Q8BX8NdZ9z3vDTELmpvG_xbIA&oe=6A1A700D');
+    "
+  >
+
+    <div class="award-overlay">
+      <div class="award-logo">SAMSUNG</div>
+      <span class="award-title">Đại lý xuất sắc</span>
+    </div>
+
+  </div>
+
+</div>
+          <!-- Frame 2 -->
+          <div class="award-frame">
+            <div class="award-inner lg">
+              <div class="award-logo">LG</div>
+              <span class="award-title">Đại lý xuất sắc</span>
+              <span class="award-year">2023</span>
+            </div>
+          </div>
+          <!-- Frame 3 -->
+          <div class="award-frame">
+            <div class="award-inner daikin">
+              <div class="award-logo">DAIKIN</div>
+              <span class="award-title">Đại lý xuất sắc</span>
+              <span class="award-year">2022</span>
+            </div>
+          </div>
+          <!-- Frame 4 -->
+          <div class="award-frame">
+            <div class="award-inner panasonic">
+              <div class="award-logo">Panasonic</div>
+              <span class="award-title">Đại lý xuất sắc</span>
+              <span class="award-year">2021</span>
+            </div>
+          </div>
+          <!-- Frame 5 (Trophy) -->
+          <div class="award-frame">
+            <div class="award-inner trophy-inner">
+              <i class="fa-solid fa-trophy"></i>
+              <span>CÚP VINH DANH</span>
+            </div>
+          </div>
+          <!-- Frame 6 -->
+          <div class="award-frame">
+            <div class="award-inner">
+              <i
+                class="fa-solid fa-medal"
+                style="font-size: 24px; color: #d4af37; margin-bottom: 5px"
+              ></i>
+              <span class="award-title" style="font-size: 8px">CHỨNG NHẬN</span>
+              <span class="award-year">UY TÍN VÀNG</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="award-slogan">
+          ✔️ Uy tín tạo nên thương hiệu - Chất lượng tạo nên niềm tin!
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. PRE-FOOTER CTA BAR -->
+    <section class="pre-footer-cta">
+      <div class="container pre-footer-grid">
+        <div class="pre-footer-text">
+          <h3>SẴN SÀNG SETUP COMBO CHO BẠN?</h3>
+          <p>LIÊN HỆ NGAY – TƯ VẤN MIỄN PHÍ!</p>
+        </div>
+        <div class="pre-footer-buttons">
+          <a href="#" class="btn-action btn-zalo">
+            <span class="zalo-icon">Z</span> Nhắn Zalo Ngay
+          </a>
+          <a href="tel:0945606998" class="btn-action btn-phone">
+            <i class="fa-solid fa-phone"></i> 0945 606 998
+          </a>
+          <a href="https://facebook.com" class="btn-action btn-facebook">
+            <i class="fa-brands fa-facebook-f"></i> Facebook
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- THANK YOU SECTION -->
+    <section class="thankyou-section" id="thankyou-section">
+      <div class="container">
+        <div class="thankyou-inner">
+          <div class="thankyou-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h2 class="thankyou-title">
+            Cảm ơn quý khách đã tin tưởng & đồng hành
+          </h2>
+          <p class="thankyou-subtitle">
+            Hơn <strong>10 năm</strong> phục vụ, chúng tôi tự hào được đồng hành
+            cùng hàng nghìn gia đình tại Nghệ An và khu vực lân cận. Sự tin
+            tưởng của quý khách là nguồn động lực lớn nhất để Điện Máy Hải Lan
+            không ngừng nỗ lực nâng cao chất lượng dịch vụ.
+          </p>
+
+          <div class="thankyou-values">
+            <div class="tvalue-item">
+              <i class="fa-solid fa-handshake"></i>
+              <span>Uy tín tạo niềm tin</span>
+            </div>
+            <div class="tvalue-item">
+              <i class="fa-solid fa-star"></i>
+              <span>Chất lượng tạo thương hiệu</span>
+            </div>
+            <div class="tvalue-item">
+              <i class="fa-solid fa-comments"></i>
+              <span>Khách hàng là trọng tâm</span>
+            </div>
+          </div>
+
+          <div class="feedback-box">
+            <h3>
+              <i class="fa-solid fa-lightbulb"></i> Ý kiến đóng góp của quý
+              khách
+            </h3>
+            <p>
+              Để phục vụ quý khách ngày càng tốt hơn, chúng tôi luôn lắng nghe
+              mọi góp ý. Hãy liên hệ với chúng tôi qua:
+            </p>
+            <div class="feedback-contacts">
+              <a
+                href="mailto:dienmayhailan.vinh@gmail.com"
+                class="feedback-link"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                dienmayhailan.vinh@gmail.com
+              </a>
+              <a href="tel:0945606998" class="feedback-link">
+                <i class="fa-solid fa-phone"></i>
+                0945 606 998
+              </a>
+              <a href="https://facebook.com" class="feedback-link">
+                <i class="fa-brands fa-facebook"></i>
+                Facebook Điện Máy Hải Lan
+              </a>
+            </div>
+          </div>
+
+          <div class="thankyou-signature">
+            <div class="signature-logo">HL</div>
+            <div>
+              <strong>ĐIỆN MÁY HẢI LAN</strong>
+              <p>128 Thắng Long, Nghi Kim, TP. Vinh, Nghệ An</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. MAIN FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-main-grid">
+          <!-- Col 1 -->
+          <div class="footer-col footer-col-logo">
+            <div class="logo-area">
+              <div class="logo-circle">HL</div>
+              <div class="logo-text">
+                <h1 style="color: #fff">ĐIỆN MÁY HẢI LAN</h1>
+                <p>Uy tín tạo niềm tin</p>
+              </div>
+            </div>
+            <p class="footer-logo-slogan">
+              Hệ thống phân phối điện máy, tủ đông, điều hòa, đồ gia dụng gia
+              đình chất lượng cao hàng đầu khu vực Nghệ An.
+            </p>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="footer-col">
+            <h4>Địa chỉ kho hàng</h4>
+            <div class="footer-info-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Tổng kho Nghệ An:</strong><br />
+                128 Thắng Long, Nghi Kim, TP. Vinh, Nghệ An
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="footer-col">
+            <h4>Hotline hỗ trợ</h4>
+            <div class="footer-info-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                0945 606 998 - 0968 132 027<br />
+                0966 366 998 - 0946 866 998
+              </div>
+            </div>
+            <div class="footer-info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>dienmayhailan.vinh@gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Trust Strip -->
+        <div class="footer-trust-strip">
+          <div class="trust-item">
+            <i class="fa-solid fa-headset trust-icon"></i>
+            <div class="trust-desc">
+              <h5>Tư vấn miễn phí</h5>
+              <p>Hỗ trợ 24/7 nhiệt tình</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-box-open trust-icon"></i>
+            <div class="trust-desc">
+              <h5>Hàng chính hãng</h5>
+              <p>100% mới nguyên đai</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-tags trust-icon"></i>
+            <div class="trust-desc">
+              <h5>Giá tốt nhất</h5>
+              <p>Cam kết cực cạnh tranh</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-shield-halved trust-icon"></i>
+            <div class="trust-desc">
+              <h5>Bảo hành uy tín</h5>
+              <p>Hỗ trợ nhanh chóng</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright-text">
+          © 2025 Điện Máy Hải Lan. All rights reserved
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Smooth scroll with offset for sticky header
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            const headerHeight = document.querySelector("header").offsetHeight;
+            const top =
+              target.getBoundingClientRect().top +
+              window.scrollY -
+              headerHeight -
+              10;
+            window.scrollTo({ top, behavior: "smooth" });
+          }
+        });
+      });
+
+      // Highlight nav on scroll
+      const sections = document.querySelectorAll("section[id], main[id]");
+      const navLinks = document.querySelectorAll("nav ul li a");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((sec) => {
+          const top = sec.offsetTop - 100;
+          if (window.scrollY >= top) current = sec.id;
+        });
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current)
+            link.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
