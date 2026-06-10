@@ -254,21 +254,23 @@ nav ul li a:hover {
 
 .action-buttons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
 .btn-action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 28px;
+  gap: 6px;
+  padding: 12px 18px;
   border-radius: 50px;
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
   transition: all 0.2s;
+  white-space: nowrap;
 }
 
 .btn-zalo {
@@ -299,6 +301,12 @@ nav ul li a:hover {
 .btn-facebook {
   background: linear-gradient(135deg, #1877f2, #0a4fa8);
   box-shadow: 0 4px 15px rgba(24, 119, 242, 0.35);
+}
+
+/* TikTok - đen (brand color của TikTok) */
+.btn-tiktok {
+  background: linear-gradient(135deg, #111111, #333333);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 /* Phone giữ màu đỏ */
