@@ -30,3 +30,42 @@ window.addEventListener("scroll", () => {
       link.classList.add("active");
   });
 });
+
+// Mobile menu toggle
+const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+const headerNav = document.getElementById("headerNav");
+
+if (mobileMenuToggle && headerNav) {
+  mobileMenuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    headerNav.classList.toggle("active");
+    const icon = mobileMenuToggle.querySelector("i");
+    if (headerNav.classList.contains("active")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    } else {
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!headerNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+      headerNav.classList.remove("active");
+      const icon = mobileMenuToggle.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  // Close menu when clicking a link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      headerNav.classList.remove("active");
+      const icon = mobileMenuToggle.querySelector("i");
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+    });
+  });
+}
